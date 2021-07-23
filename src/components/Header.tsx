@@ -31,6 +31,7 @@ const Header: React.FC = () => {
             className={`${
               isExpanded ? "h-36 w-36" : "h-24 w-24"
             } transition-all rounded-full shadow-xl`}
+            alt="Fotografia de John Doe"
             src="https://d3cwdr4mx7w8ca.cloudfront.net/imgcdn/20210107132157/card/p1109photo.jpg"
           ></img>
         </Link>
