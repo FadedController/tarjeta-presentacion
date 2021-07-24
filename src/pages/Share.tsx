@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ContentSection from "../components/ContentSection";
+import SendEmail from "../components/SendEmail";
 
 const Share: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const Share: React.FC = () => {
           </div>
         </Link>
       </div>
+      <SendEmail />
     </ContentSection>
   );
 };
