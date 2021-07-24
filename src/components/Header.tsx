@@ -12,8 +12,6 @@ const Header: React.FC = () => {
     return false;
   };
 
-  console.log(location, isOnIndex(location.pathname));
-
   useEffect(() => {
     const expanded = isOnIndex(location.pathname);
     setIsExpanded(expanded);
@@ -23,7 +21,7 @@ const Header: React.FC = () => {
     <div
       className={`${
         isExpanded ? "h-48 mb-20" : "h-24 mb-12"
-      } transition-all bg-red-500 opacity-80 relative`}
+      } transition-all bg-img opacity-80 relative`}
     >
       <div className="absolute h-32 w-full -bottom-16 flex items-center justify-center">
         <Link to="/">
@@ -38,26 +36,22 @@ const Header: React.FC = () => {
       </div>
       <div
         className={`${
-          isExpanded ? "w-16 pl-1" : "w-0 pl-0"
-        } overflow-hidden transition-all bg-black opacity-70 absolute rounded-l-sm right-0 bottom-0 flex flex-col items-center space-y-2 justify-end py-4`}
+          isExpanded ? "w-16 lg:w-24 pl-1" : "w-0 pl-0"
+        } overflow-hidden transition-all bg-black opacity-70 absolute rounded-l-sm right-0 bottom-0 flex flex-col items-center space-y-4 justify-end py-4`}
       >
         <Link
-          to="/"
-          className="transform transition-transform hover:scale-110 hover:rotate-6"
-        >
-          <span className="material-icons text-white">home</span>
-        </Link>
-        <Link
           to="/share"
-          className="transform transition-transform hover:scale-110 hover:rotate-6"
+          className="flex flex-col items-center justify-center transform transition-transform hover:scale-110 hover:rotate-6"
         >
           <span className="material-icons text-white">share</span>
+          <p className="hidden lg:block text-white">Compartir</p>
         </Link>
         <Link
-          className="transform transition-transform hover:scale-110 hover:rotate-6"
+          className="flex flex-col items-center justify-center transform transition-transform hover:scale-110 hover:rotate-6"
           to="/qr-code"
         >
           <span className="material-icons text-white">qr_code</span>
+          <p className="hidden lg:block text-white">Código QR</p>
         </Link>
       </div>
     </div>
