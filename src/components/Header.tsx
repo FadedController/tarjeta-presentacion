@@ -54,6 +54,19 @@ const Header: React.FC = () => {
           <p className="hidden lg:block text-white">Código QR</p>
         </Link>
       </div>
+      <div
+        className={`${
+          isExpanded ? "w-0 h-0 pl-0" : "w-16 lg:w-24 h-12 lg:h-20 pl-1"
+        } flex flex-col items-center justify-center overflow-hidden bg-black opacity-70 absolute -bottom-12 lg:-bottom-20 right-0 tranistion-all`}
+      >
+        <Link
+          to="/"
+          className="transform transition-transform hover:scale-110 hover:rotate-6 flex flex-col items-center justify-center"
+        >
+          <span className="material-icons text-white text-3xl">close</span>
+          <p className="text-white hidden lg:block">Cerrar</p>
+        </Link>
+      </div>
     </div>
   );
 };

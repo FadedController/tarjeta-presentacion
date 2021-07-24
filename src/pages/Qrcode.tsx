@@ -3,7 +3,10 @@ import ContentSection from "../components/ContentSection";
 
 const Qrcode: React.FC = () => {
   return (
-    <ContentSection className="flex flex-col space-y-6 items-center justify-center pt-4 px-2">
+    <ContentSection
+      maxW="max-w-lg"
+      className="flex flex-col space-y-6 items-center justify-center pt-4 px-2 mb-24"
+    >
       <h1 className="text-3xl font-semibold text-gray-800">Codigo QR</h1>
       <div className="flex flex-col items-center justify-center">
         <p className="font-light text-gray-700 text-center">

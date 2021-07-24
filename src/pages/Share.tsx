@@ -4,7 +4,10 @@ import ContentSection from "../components/ContentSection";
 
 const Share: React.FC = () => {
   return (
-    <ContentSection className="flex flex-col space-y-4 items-center justify-center pt-4 px-2">
+    <ContentSection
+      maxW="max-w-lg"
+      className="flex flex-col space-y-4 items-center justify-center pt-4 px-2"
+    >
       <h1 className="text-3xl font-semibold text-gray-800">Compartir</h1>
       <div className="flex flex-col items-center justify-center">
         <p className="font-light text-gray-700 text-center">
@@ -12,7 +15,7 @@ const Share: React.FC = () => {
           informados que tengas habilitados en tu dispositivo.
         </p>
       </div>
-      <div className="w-full grid grid-cols-3 lg:grid-cols-5 gap-2 px-2">
+      <div className="w-full grid grid-cols-3 gap-2 px-2">
         <Link
           to="qr-code"
           className="border shadow-md rounded-sm overflow-hidden transform transition-transform hover:scale-105"

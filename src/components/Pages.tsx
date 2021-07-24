@@ -9,6 +9,7 @@ import Qrcode from "../pages/Qrcode";
 import Location from "../pages/Location";
 import Contact from "../pages/Contact";
 import Video from "../pages/Video";
+import Posts from "../pages/Posts";
 
 const Pages: React.FC = () => {
   return (
@@ -26,7 +27,7 @@ const Pages: React.FC = () => {
           <Route path="/location" component={Location} />
           <Route path="/contact" component={Contact} />
           <Route path="/video" component={Video} />
-          <Route path="/posts" component={Qrcode} />
+          <Route path="/posts" component={Posts} />
           <Route exact path="/" component={Index} />
           <Route path="*">Not Found</Route>
         </AnimatedSwitch>
