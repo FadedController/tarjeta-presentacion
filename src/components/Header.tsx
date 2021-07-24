@@ -37,7 +37,7 @@ const Header: React.FC = () => {
       <div
         className={`${
           isExpanded ? "w-16 lg:w-24 pl-1" : "w-0 pl-0"
-        } overflow-hidden transition-all bg-black opacity-70 absolute rounded-l-sm right-0 bottom-0 flex flex-col items-center space-y-4 justify-end py-4`}
+        } overflow-hidden transition-all bg-secondary-0 opacity-90 absolute rounded-l-sm right-0 bottom-0 flex flex-col items-center space-y-4 justify-end py-4`}
       >
         <Link
           to="/share"
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
       <div
         className={`${
           isExpanded ? "w-0 h-0 pl-0" : "w-16 lg:w-24 h-12 lg:h-20 pl-1"
-        } flex flex-col items-center justify-center overflow-hidden bg-black opacity-70 absolute -bottom-12 lg:-bottom-20 right-0 tranistion-all`}
+        } flex flex-col items-center justify-center overflow-hidden bg-secondary-0 opacity-90 absolute -bottom-12 lg:-bottom-20 right-0 tranistion-all`}
       >
         <Link
           to="/"

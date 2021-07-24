@@ -21,7 +21,7 @@ const Share: React.FC = () => {
           to="qr-code"
           className="border shadow-md rounded-sm overflow-hidden transform transition-transform hover:scale-105"
         >
-          <div className="bg-gray-600 flex items-center justify-center h-12">
+          <div className="bg-tertiary-0 flex items-center justify-center h-12">
             <span className="material-icons text-3xl text-white">qr_code</span>
           </div>
           <div>

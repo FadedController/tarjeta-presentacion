@@ -19,7 +19,7 @@ const Index: React.FC = () => {
         <div className="flex flex-col space-y-2">
           <a
             href="tel:3345420848"
-            className="h-16 w-16 shadow-md rounded-full bg-gray-500 hover:bg-gray-600 flex items-center justify-center cursor-pointer hover:scale-105 hover:rotate-6 transform transition-all"
+            className="h-16 w-16 shadow-md rounded-full bg-primary-0 hover:bg-primary-1 flex items-center justify-center cursor-pointer hover:scale-105 hover:rotate-6 transform transition-all"
           >
             <span className="material-icons text-3xl">phone</span>
           </a>
@@ -28,7 +28,7 @@ const Index: React.FC = () => {
         <div className="flex flex-col space-y-2">
           <a
             href="https://web.whatsapp.com"
-            className="h-16 w-16 shadow-md rounded-full bg-gray-500 hover:bg-gray-600 flex items-center justify-center cursor-pointer hover:scale-105 hover:rotate-6 transform transition-all"
+            className="h-16 w-16 shadow-md rounded-full bg-primary-0 hover:bg-primary-1 flex items-center justify-center cursor-pointer hover:scale-105 hover:rotate-6 transform transition-all"
           >
             <WhatsApp className="h-7 w-7 fill-current" />
           </a>
@@ -39,7 +39,7 @@ const Index: React.FC = () => {
         <div className="flex flex-col space-y-2">
           <a
             href="mailto:test@email.com"
-            className="h-16 w-16 shadow-md rounded-full bg-gray-500 hover:bg-gray-600 flex items-center justify-center cursor-pointer hover:scale-105 hover:rotate-6 transform transition-all"
+            className="h-16 w-16 shadow-md rounded-full bg-primary-0 hover:bg-primary-1 flex items-center justify-center cursor-pointer hover:scale-105 hover:rotate-6 transform transition-all"
           >
             <span className="material-icons text-3xl">mail</span>
           </a>

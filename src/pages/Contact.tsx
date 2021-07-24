@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
         </div>
         <div className="grid grid-cols-3 gap-2 w-full">
           <a
-            className="flex shadow-md rounded-sm py-2 text-white flex-col items-center justify-center space-y-2 bg-gray-600 transform hover:scale-105 transition-all"
+            className="flex shadow-md rounded-sm py-2 text-white flex-col items-center justify-center space-y-2 bg-primary-1 transform hover:scale-105 transition-all"
             href="tel:3345420848"
           >
             <span className="material-icons">phone</span>
@@ -36,21 +36,21 @@ const Contact: React.FC = () => {
         </div>
         <div className="grid grid-cols-3 gap-2 w-full">
           <a
-            className="flex shadow-md rounded-sm py-2 text-white flex-col items-center justify-center space-y-2 bg-gray-600 transform hover:scale-105 transition-all"
+            className="flex shadow-md rounded-sm py-2 text-white flex-col items-center justify-center space-y-2 bg-primary-1 transform hover:scale-105 transition-all"
             href="tel:3345420848"
           >
             <span className="material-icons">phone</span>
             <span>Llamar</span>
           </a>
           <a
-            className="flex shadow-md rounded-sm py-2 text-white flex-col items-center justify-center space-y-2 bg-gray-600 transform hover:scale-105 transition-all"
+            className="flex shadow-md rounded-sm py-2 text-white flex-col items-center justify-center space-y-2 bg-primary-1 transform hover:scale-105 transition-all"
             href="https://web.whatsapp.com"
           >
             <WhatsApp className="h-6 w-6 fill-current" />
             <span>Whatsapp</span>
           </a>
           <a
-            className="flex shadow-md rounded-sm py-2 text-white flex-col items-center justify-center space-y-2 bg-gray-600 transform hover:scale-105 transition-all"
+            className="flex shadow-md rounded-sm py-2 text-white flex-col items-center justify-center space-y-2 bg-primary-1 transform hover:scale-105 transition-all"
             href="sms:3345420848"
           >
             <span className="material-icons">sms</span>
@@ -65,7 +65,7 @@ const Contact: React.FC = () => {
         </div>
         <div className="grid grid-cols-3 gap-2 w-full">
           <a
-            className="flex shadow-md rounded-sm py-2 text-white flex-col items-center justify-center space-y-2 bg-gray-600 transform hover:scale-105 transition-all"
+            className="flex shadow-md rounded-sm py-2 text-white flex-col items-center justify-center space-y-2 bg-primary-1 transform hover:scale-105 transition-all"
             href="mailto:test@email.com"
           >
             <span className="material-icons">mail</span>

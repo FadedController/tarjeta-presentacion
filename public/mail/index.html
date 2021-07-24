@@ -16,7 +16,7 @@
     >
       <div style="margin-top: 2rem; text-align: center">
         <img
-          src="https://d3cwdr4mx7w8ca.cloudfront.net/imgcdn/20210107132157/card/p1109photo.jpg"
+          src="{{photo_src}}"
           alt="this is a profile picture"
           style="border-radius: 50%; height: 10rem; width: 10rem"
         />
@@ -32,7 +32,7 @@
             font-size: 1.875rem;
           "
         >
-          John Doe
+          {{user_name}}
         </h1>
         <h2
           style="
@@ -44,7 +44,7 @@
             font-size: 1.25rem;
           "
         >
-          Sales manager
+        {{first_position}}
         </h2>
         <h2
           style="
@@ -56,7 +56,7 @@
             font-size: 1.25rem;
           "
         >
-          Smart business representation
+          {{second_position}}
         </h2>
       </div>
       <div>
@@ -76,7 +76,7 @@
             "
           >
             <a
-              href="tel:3345420848"
+              href="tel:{{phone}}"
               style="
                 display: table;
                 margin-left: 0.725rem;
@@ -92,7 +92,7 @@
               style="display: table-cell; vertical-align: middle"
             >
               <img
-              src="../img/phone.png"
+              src="https://tarjeta-presentacion.vercel.app/img/phone.png"
               ></img>
             </span>
             </a>
@@ -115,7 +115,7 @@
             "
           >
             <a
-              href="https://web.whatsapp.com"
+              href="{{whatsapp}}"
               target="_blank"
               style="
                 display: table;
@@ -132,7 +132,8 @@
             style="display: table-cell; vertical-align: middle"
           >
             <img
-            src="../img/whatsapp.png"
+            src="https://tarjeta-presentacion.vercel.app/img/whatsapp.png"
+
             ></img>
           </span>
             </a>
@@ -155,7 +156,7 @@
             "
           >
             <a
-              href="mailto:test@email.com"
+              href="mailto:{{email}}"
               style="
                 display: table;
                 margin-left: 0.725rem;
@@ -171,7 +172,7 @@
              style="display: table-cell; vertical-align: middle"
             >
               <img
-              src="../img/mail.png"
+              src="https://tarjeta-presentacion.vercel.app/img/mail.png"
               ></img>
             </span>
             </a>
@@ -187,6 +188,24 @@
             </div>
           </div>
         </div>
+      </div>
+      <div style="margin: 2rem; text-align: center">
+        <p
+          style="
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            padding: 0;
+            color: rgba(55, 65, 81, 1);
+            font-weight: 300;
+            font-size: 1rem;
+          "
+        >
+          Haz clic <a
+          href="{{link}}"
+          target="_blank"
+          style="text-decoration: underline; cursor: pointer;"
+          >aqui</a> para mas informacion
+        </h2>
       </div>
     </div>
   </body>
