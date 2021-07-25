@@ -3,7 +3,15 @@ import { init, send } from "emailjs-com";
 import { useEffect } from "react";
 import { useState } from "react";
 
-const SendEmail: React.FC = () => {
+interface SendEmailProps {
+  input: {
+    placeholder: string;
+    "btn-1": string;
+    loading: string;
+  };
+}
+
+const SendEmail: React.FC<SendEmailProps> = ({ input }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -47,19 +55,19 @@ const SendEmail: React.FC = () => {
           onChange={({ target }) => {
             setParams({ ...params, user_email: target.value });
           }}
-          placeholder="Escribe aqui tu correo"
+          placeholder={input.placeholder}
         />
         <button
           className="w-1/5 bg-tertiary-0 text-white font-semibold"
           onClick={sendEmail}
         >
-          Enviar
+          {input["btn-1"]}
         </button>
       </div>
       {loading && (
         <div className="flex items-center justify-center">
           <p className="animate-bounce text-xl font-semibold text-secondary-0">
-            Sending...
+            {input.loading}
           </p>
         </div>
       )}

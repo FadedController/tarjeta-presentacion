@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import ContentSection from "../components/ContentSection";
+import ESData from "../lang/ui.es.json";
+import ENData from "../lang/ui.en.json";
+import { LanguageContext } from "../components/Pages";
 
 const Location: React.FC = () => {
+  const [language] = useContext(LanguageContext);
+  const {
+    pages: { location },
+  } = language === "es" ? ESData : ENData;
+
   return (
     <ContentSection
       maxW="max-w-lg"
       className="flex flex-col space-y-4 items-center justify-center pt-4 px-2 mb-24"
     >
-      <h1 className="text-3xl font-semibold text-gray-800">Ubicacion</h1>
+      <h1 className="text-3xl font-semibold text-gray-800">{location.h1}</h1>
       <div className="flex flex-col items-center justify-center">
         <p className="font-light text-gray-700 text-center">Eiffel Tower</p>
         <p className="font-light text-gray-700 text-center">Paris</p>
@@ -16,7 +24,7 @@ const Location: React.FC = () => {
       <div className="rounded-md overflow-hidden w-full bg-gray-200 shadow-xl relative">
         <div className="absolute flex items-center justify-center top-0 bottom-0 right-0 left-0">
           <p className="animate-bounce text-2xl font-semibold">
-            Loading map...
+            {location.loading}
           </p>
         </div>
         <iframe

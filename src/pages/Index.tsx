@@ -1,8 +1,17 @@
 import React from "react";
 import ContentSection from "../components/ContentSection";
 import { WhatsApp } from "../icons";
+import ESData from "../lang/ui.es.json";
+import ENData from "../lang/ui.en.json";
+import { useContext } from "react";
+import { LanguageContext } from "../components/Pages";
 
 const Index: React.FC = () => {
+  const [language] = useContext(LanguageContext);
+  const {
+    pages: { index },
+  } = language === "es" ? ESData : ENData;
+
   return (
     <ContentSection
       maxW="max-w-lg"
@@ -23,7 +32,9 @@ const Index: React.FC = () => {
           >
             <span className="material-icons text-3xl">phone</span>
           </a>
-          <p className="text-gray-600 font-light text-sm text-center">Llamar</p>
+          <p className="text-gray-600 font-light text-sm text-center">
+            {index["btn-1"]}
+          </p>
         </div>
         <div className="flex flex-col space-y-2">
           <a
@@ -33,7 +44,7 @@ const Index: React.FC = () => {
             <WhatsApp className="h-7 w-7 fill-current" />
           </a>
           <p className="text-gray-600 font-light text-sm text-center">
-            Whatsapp
+            {index["btn-2"]}
           </p>
         </div>
         <div className="flex flex-col space-y-2">
@@ -43,7 +54,9 @@ const Index: React.FC = () => {
           >
             <span className="material-icons text-3xl">mail</span>
           </a>
-          <p className="text-gray-600 font-light text-sm text-center">Email</p>
+          <p className="text-gray-600 font-light text-sm text-center">
+            {index["btn-3"]}
+          </p>
         </div>
       </div>
     </ContentSection>

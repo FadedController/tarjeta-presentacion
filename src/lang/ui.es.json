@@ -1,0 +1,79 @@
+{
+  "pages": {
+    "index": {
+      "btn-1": "Llamar",
+      "btn-2": "Whatsapp",
+      "btn-3": "Email"
+    },
+    "contact": {
+      "h1": "Contacto",
+      "p": "Puedes contactar directamente pulsando el icono deseado.",
+      "phone-1": {
+        "title": "Telefono Central:",
+        "number": "(33) 4542 0848",
+        "btn-1": "Llamar"
+      },
+      "phone-2": {
+        "title": "Movil:",
+        "number": "(33) 4542 0848",
+        "btn-1": "Llamar",
+        "btn-2": "Whatsapp",
+        "btn-3": "SMS"
+      },
+      "email": {
+        "title": "Correo electrónico:",
+        "email": "test@email.com",
+        "btn-1": "Email"
+      }
+    },
+    "location": {
+      "h1": "Ubicación",
+      "loading": "Cargando mapa..."
+    },
+    "mail": {
+      "h1": "Compartir por correo",
+      "p": "Envia esta tarjeta a cualquier direccion valida de correo electrónico",
+      "input": {
+        "placeholder": "Escribe aqui tu correo",
+        "btn-1": "Enviar",
+        "loading": "Enviando..."
+      }
+    },
+    "qrcode": {
+      "h1": "Codigo QR",
+      "p": "Usa la cámara de tu smartphone o un lector de QR para acceder a la tarjeta digital."
+    },
+    "share": {
+      "h1": "Compartir",
+      "p": "Puedes compartir esta tarjeta fácilmente en cualquiera de los sistemas informados que tengas habilitados en tu dispositivo.",
+      "buttons": {
+        "btn-1": "Codigo QR",
+        "btn-2": "Enviar por correo",
+        "btn-3": ["Copiar URL", "URL Copiada!"]
+      }
+    },
+    "video": {
+      "h1" : "Video",
+      "p": "Dale un vistazo a este video!"
+    },
+    "posts": {
+      "h1": "Acerca de",
+      "p": "Dale un vistazo a toda esta informacion!"
+    }
+  },
+  "components": {
+    "header": {
+      "alt-img": "Fotografia de frente",
+      "btn-1": "Compartir",
+      "btn-2": "Código QR",
+      "btn-3": "Cerrar"
+    },
+    "navigation": {
+      "btn-1": "Contacto",
+      "btn-2": "Ubicación",
+      "btn-3": "Acerca de",
+      "btn-4": "Video",
+      "btn-5": "Compartir"
+    }
+  }
+}

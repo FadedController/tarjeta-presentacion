@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import ESData from "../lang/ui.es.json";
+import ENData from "../lang/ui.en.json";
+import { LanguageContext } from "./Pages";
 
 const Header: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(true);
   const location = useLocation();
+
+  const [language] = useContext(LanguageContext);
+  const {
+    components: { header },
+  } = language === "es" ? ESData : ENData;
 
   const isOnIndex = (path: string) => {
     if (path === "/") return true;
@@ -29,7 +37,7 @@ const Header: React.FC = () => {
             className={`${
               isExpanded ? "h-36 w-36" : "h-24 w-24"
             } transition-all rounded-full shadow-xl`}
-            alt="Fotografia de John Doe"
+            alt={header["alt-img"]}
             src="https://d3cwdr4mx7w8ca.cloudfront.net/imgcdn/20210107132157/card/p1109photo.jpg"
           ></img>
         </Link>
@@ -44,14 +52,14 @@ const Header: React.FC = () => {
           className="flex flex-col items-center justify-center transform transition-transform hover:scale-110 hover:rotate-6"
         >
           <span className="material-icons text-white">share</span>
-          <p className="hidden lg:block text-white">Compartir</p>
+          <p className="hidden lg:block text-white">{header["btn-1"]}</p>
         </Link>
         <Link
           className="flex flex-col items-center justify-center transform transition-transform hover:scale-110 hover:rotate-6"
           to="/qr-code"
         >
           <span className="material-icons text-white">qr_code</span>
-          <p className="hidden lg:block text-white">Código QR</p>
+          <p className="hidden lg:block text-white">{header["btn-2"]}</p>
         </Link>
       </div>
       <div
@@ -64,7 +72,7 @@ const Header: React.FC = () => {
           className="transform transition-transform hover:scale-110 hover:rotate-6 flex flex-col items-center justify-center"
         >
           <span className="material-icons text-white text-3xl">close</span>
-          <p className="text-white hidden lg:block">Cerrar</p>
+          <p className="text-white hidden lg:block">{header["btn-3"]}</p>
         </Link>
       </div>
     </div>

@@ -1,0 +1,79 @@
+{
+  "pages": {
+    "index": {
+      "btn-1": "Call",
+      "btn-2": "Whatsapp",
+      "btn-3": "Email"
+    },
+    "contact": {
+      "h1": "Contact",
+      "p": "Contact me directly using any of the buttons underneath.",
+      "phone-1": {
+        "title": "Central phone:",
+        "number": "(33) 4542 0848",
+        "btn-1": "Call"
+      },
+      "phone-2": {
+        "title": "Mobile:",
+        "number": "(33) 4542 0848",
+        "btn-1": "Call",
+        "btn-2": "Whatsapp",
+        "btn-3": "SMS"
+      },
+      "email": {
+        "title": "Email:",
+        "email": "test@email.com",
+        "btn-1": "Email"
+      }
+    },
+    "location": {
+      "h1": "Location",
+      "loading": "Loading map..."
+    },
+    "mail": {
+      "h1": "Share via email",
+      "p": "Send this card to any valid email adress",
+      "input": {
+        "placeholder": "Write your email here",
+        "btn-1": "Send",
+        "loading": "Sending..."
+      }
+    },
+    "qrcode": {
+      "h1": "QR Code",
+      "p": "Use your smarthphone's camera or a QR scanner to access the digital card."
+    },
+    "share": {
+      "h1": "Share",
+      "p": "You can share this card easily with any of the services you have enabled in your device.",
+      "buttons": {
+        "btn-1": "QR Code",
+        "btn-2": "Send via email",
+        "btn-3": ["Copy URL", "URL Copied!"]
+      }
+    },
+    "video": {
+      "h1" : "Video",
+      "p": "Have a look at this video!"
+    },
+    "posts": {
+      "h1": "About",
+      "p": "Take a look to all of this extra information!"
+    }
+  },
+  "components": {
+    "header": {
+      "alt-img": "Front photograph",
+      "btn-1": "Share",
+      "btn-2": "QR Code",
+      "btn-3": "Close"
+    },
+    "navigation": {
+      "btn-1": "Contact",
+      "btn-2": "Location",
+      "btn-3": "About",
+      "btn-4": "Video",
+      "btn-5": "Share"
+    }
+  }
+}

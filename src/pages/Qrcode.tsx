@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import ContentSection from "../components/ContentSection";
+import ESData from "../lang/ui.es.json";
+import ENData from "../lang/ui.en.json";
+import { LanguageContext } from "../components/Pages";
 
 const Qrcode: React.FC = () => {
+  const [language] = useContext(LanguageContext);
+  const {
+    pages: { qrcode },
+  } = language === "es" ? ESData : ENData;
   return (
     <ContentSection
       maxW="max-w-lg"
       className="flex flex-col space-y-6 items-center justify-center pt-4 px-2 mb-24"
     >
-      <h1 className="text-3xl font-semibold text-gray-800">Codigo QR</h1>
+      <h1 className="text-3xl font-semibold text-gray-800">{qrcode.h1}</h1>
       <div className="flex flex-col items-center justify-center">
-        <p className="font-light text-gray-700 text-center">
-          Usa la cámara de tu smartphone o un lector de QR para acceder a la
-          tarjeta digital.
-        </p>
+        <p className="font-light text-gray-700 text-center">{qrcode.p}</p>
         <img src="img/frame.png" alt="QR code" />
       </div>
     </ContentSection>
