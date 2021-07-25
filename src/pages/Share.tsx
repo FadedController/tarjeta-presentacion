@@ -31,7 +31,7 @@ const Share: React.FC = () => {
       <div className="w-full grid grid-cols-3 gap-2 px-2">
         <Link
           to="qr-code"
-          className="border shadow-md rounded-sm overflow-hidden transform transition-transform hover:scale-105"
+          className="border shadow-md rounded-lg overflow-hidden transform transition-transform hover:scale-105"
         >
           <div className="bg-tertiary-0 flex items-center justify-center h-12">
             <span className="material-icons text-3xl text-white">qr_code</span>
@@ -44,7 +44,7 @@ const Share: React.FC = () => {
         </Link>
         <Link
           to="mail"
-          className="border shadow-md rounded-sm overflow-hidden transform transition-transform hover:scale-105"
+          className="border shadow-md rounded-lg overflow-hidden transform transition-transform hover:scale-105"
         >
           <div className="bg-tertiary-0 flex items-center justify-center h-12">
             <span className="material-icons text-3xl text-white">mail</span>
@@ -57,7 +57,7 @@ const Share: React.FC = () => {
         </Link>
         <button
           onClick={copyToClipboard}
-          className="border shadow-md rounded-sm overflow-hidden transform transition-transform hover:scale-105"
+          className="border shadow-md rounded-lg overflow-hidden transform transition-transform hover:scale-105"
         >
           <div className="bg-tertiary-0 flex items-center justify-center h-12">
             <span className="material-icons text-3xl text-white">

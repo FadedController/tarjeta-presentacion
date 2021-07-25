@@ -14,12 +14,15 @@ import Mail from "../pages/Mail";
 import { createContext } from "react";
 import { useState } from "react";
 
+type Language = "es" | "en";
+
 export const LanguageContext = createContext<
-  ["es" | "en", React.Dispatch<React.SetStateAction<"es" | "en">>] | [null]
->([null]);
+  | [Language, React.Dispatch<React.SetStateAction<Language>>]
+  | [null, () => void]
+>([null, () => {}]);
 
 const Pages: React.FC = () => {
-  const [language, setLanguage] = useState<"es" | "en">("en");
+  const [language, setLanguage] = useState<Language>("en");
 
   useEffect(() => {
     var language = window.navigator.language;

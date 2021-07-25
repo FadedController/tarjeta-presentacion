@@ -66,7 +66,8 @@
       "alt-img": "Front photograph",
       "btn-1": "Share",
       "btn-2": "QR Code",
-      "btn-3": "Close"
+      "btn-3": "Close",
+      "btn-4": "Language"
     },
     "navigation": {
       "btn-1": "Contact",

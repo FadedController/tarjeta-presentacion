@@ -21,7 +21,7 @@ const Location: React.FC = () => {
         <p className="font-light text-gray-700 text-center">Paris</p>
         <p className="font-light text-gray-700 text-center">France</p>
       </div>
-      <div className="rounded-md overflow-hidden w-full bg-gray-200 shadow-xl relative">
+      <div className="rounded-lg overflow-hidden w-full bg-gray-300 shadow-xl relative">
         <div className="absolute flex items-center justify-center top-0 bottom-0 right-0 left-0">
           <p className="animate-bounce text-2xl font-semibold">
             {location.loading}
@@ -32,7 +32,7 @@ const Location: React.FC = () => {
           height="300"
           allowFullScreen
           title="Map"
-          className="w-full relative"
+          className="w-full relative rounded-lg"
           loading="eager"
         ></iframe>
       </div>
