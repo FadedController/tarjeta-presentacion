@@ -10,6 +10,7 @@ import Location from "../pages/Location";
 import Contact from "../pages/Contact";
 import Video from "../pages/Video";
 import Posts from "../pages/Posts";
+import Mail from "../pages/Mail";
 
 const Pages: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const Pages: React.FC = () => {
           <Route path="/contact" component={Contact} />
           <Route path="/video" component={Video} />
           <Route path="/posts" component={Posts} />
+          <Route path="/mail" component={Mail} />
           <Route exact path="/" component={Index} />
           <Route path="*">Not Found</Route>
         </AnimatedSwitch>

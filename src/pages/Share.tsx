@@ -1,9 +1,15 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import ContentSection from "../components/ContentSection";
-import SendEmail from "../components/SendEmail";
 
 const Share: React.FC = () => {
+  const [copied, setCopied] = useState(false);
+  const copyToClipboard = async () => {
+    setCopied(true);
+    navigator.clipboard.writeText("https://tarjeta-presentacion.vercel.app/");
+  };
+
   return (
     <ContentSection
       maxW="max-w-lg"
@@ -28,8 +34,35 @@ const Share: React.FC = () => {
             <p className="h-10 flex justify-center items-center">QR Code</p>
           </div>
         </Link>
+        <Link
+          to="mail"
+          className="border shadow-md rounded-sm overflow-hidden transform transition-transform hover:scale-105"
+        >
+          <div className="bg-tertiary-0 flex items-center justify-center h-12">
+            <span className="material-icons text-3xl text-white">mail</span>
+          </div>
+          <div>
+            <p className="h-10 flex justify-center items-center">
+              Send via email
+            </p>
+          </div>
+        </Link>
+        <button
+          onClick={copyToClipboard}
+          className="border shadow-md rounded-sm overflow-hidden transform transition-transform hover:scale-105"
+        >
+          <div className="bg-tertiary-0 flex items-center justify-center h-12">
+            <span className="material-icons text-3xl text-white">
+              content_copy
+            </span>
+          </div>
+          <div>
+            <p className="h-10 flex justify-center items-center">
+              {copied ? "URL Copied!" : "Copy URL"}
+            </p>
+          </div>
+        </button>
       </div>
-      <SendEmail />
     </ContentSection>
   );
 };
