@@ -2,7 +2,7 @@
   "pages": {
     "index": {
       "btn-1": "Call",
-      "btn-2": "Whatsapp",
+      "btn-2": "WhatsApp",
       "btn-3": "Email"
     },
     "contact": {
@@ -15,7 +15,7 @@
       "phone-2": {
         "title": "Mobile:",
         "btn-1": "Call",
-        "btn-2": "Whatsapp",
+        "btn-2": "WhatsApp",
         "btn-3": "SMS"
       },
       "email": {
@@ -43,11 +43,17 @@
     },
     "share": {
       "h1": "Share",
+      "h2": "Social Media",
       "p": "You can share this card easily with any of the services you have enabled in your device.",
       "buttons": {
         "btn-1": "QR Code",
         "btn-2": "Send via email",
         "btn-3": ["Copy URL", "URL Copied!"]
+      },
+      "share-strings": {
+        "whatsapp": "Access the digital business card directly from this link: ",
+        "twitter": "Look at the digital business card I found: ",
+        "sms": "Look at this digital business card: "
       }
     },
     "video": {

@@ -1,7 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import ContentSection from "../components/ContentSection";
 import ESData from "../lang/ui.es.json";
 import ENData from "../lang/ui.en.json";
+import ENUser from "../lang/data.en.json";
+import ESUser from "../lang/data.es.json";
 import { LanguageContext } from "../components/Pages";
 
 const Qrcode: React.FC = () => {
@@ -9,6 +11,12 @@ const Qrcode: React.FC = () => {
   const {
     pages: { qrcode },
   } = language === "es" ? ESData : ENData;
+  const {
+    personalInformation: { name },
+  } = language === "es" ? ESUser : ENUser;
+  useEffect(() => {
+    document.title = `${name} - ${qrcode.h1}`;
+  });
   return (
     <ContentSection
       maxW="max-w-lg"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ContentSection from "../components/ContentSection";
 import { WhatsApp } from "../icons";
 import ESData from "../lang/ui.es.json";
@@ -16,6 +16,10 @@ const Index: React.FC = () => {
   const {
     personalInformation: { contact, name, position },
   } = language === "es" ? ESUser : ENUser;
+
+  useEffect(() => {
+    document.title = `${name} - ${language === "en" ? "Home" : "Inicio"}`;
+  });
 
   return (
     <ContentSection

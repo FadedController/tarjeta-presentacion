@@ -4,6 +4,12 @@ interface WhatsAppProps {
   className?: string;
 }
 
+/**
+ *
+ * @param className: Recomended default ("h-6 w-6 fill-current")
+ * @returns
+ */
+
 const WhatsApp: React.FC<WhatsAppProps> = ({ className }) => {
   return (
     <svg

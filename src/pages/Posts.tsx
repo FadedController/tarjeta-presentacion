@@ -1,14 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import ContentSection from "../components/ContentSection";
 import { LanguageContext } from "../components/Pages";
 import ESData from "../lang/ui.es.json";
 import ENData from "../lang/ui.en.json";
+import ENUser from "../lang/data.en.json";
+import ESUser from "../lang/data.es.json";
 
 const Posts: React.FC = () => {
   const [language] = useContext(LanguageContext);
   const {
     pages: { posts },
   } = language === "es" ? ESData : ENData;
+  const {
+    personalInformation: { name },
+  } = language === "es" ? ESUser : ENUser;
+  useEffect(() => {
+    document.title = `${name} - ${posts.h1}`;
+  });
   return (
     <ContentSection
       maxW="max-w-lg"

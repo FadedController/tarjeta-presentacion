@@ -2,7 +2,7 @@
   "pages": {
     "index": {
       "btn-1": "Llamar",
-      "btn-2": "Whatsapp",
+      "btn-2": "WhatsApp",
       "btn-3": "Email"
     },
     "contact": {
@@ -15,7 +15,7 @@
       "phone-2": {
         "title": "Movil:",
         "btn-1": "Llamar",
-        "btn-2": "Whatsapp",
+        "btn-2": "WhatsApp",
         "btn-3": "SMS"
       },
       "email": {
@@ -43,11 +43,17 @@
     },
     "share": {
       "h1": "Compartir",
+      "h2": "Redes Sociales",
       "p": "Puedes compartir esta tarjeta fácilmente en cualquiera de los sistemas informados que tengas habilitados en tu dispositivo.",
       "buttons": {
         "btn-1": "Codigo QR",
         "btn-2": "Enviar por correo",
         "btn-3": ["Copiar URL", "URL Copiada!"]
+      },
+      "share-strings": {
+        "whatsapp": "Accede a la tarjeta digital directamente desde este enlace: ",
+        "twitter": "Miren la tarjeta de presentación digital que encontré: ",
+        "sms": "Mira esta tarjeta de presentación digital: "
       }
     },
     "video": {

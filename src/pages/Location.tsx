@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import ContentSection from "../components/ContentSection";
 import ESData from "../lang/ui.es.json";
 import ENData from "../lang/ui.en.json";
@@ -12,8 +12,12 @@ const Location: React.FC = () => {
     pages: { location },
   } = language === "es" ? ESData : ENData;
   const {
-    personalInformation: { location: userLocation },
+    personalInformation: { location: userLocation, name },
   } = language === "es" ? ESUser : ENUser;
+
+  useEffect(() => {
+    document.title = `${name} - ${location.h1}`;
+  });
 
   return (
     <ContentSection

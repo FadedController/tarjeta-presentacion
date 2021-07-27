@@ -6,6 +6,7 @@ import { LanguageContext } from "../components/Pages";
 import { WhatsApp } from "../icons";
 import ENUser from "../lang/data.en.json";
 import ESUser from "../lang/data.es.json";
+import { useEffect } from "react";
 
 const Contact: React.FC = () => {
   const [language] = useContext(LanguageContext);
@@ -13,8 +14,12 @@ const Contact: React.FC = () => {
     pages: { contact },
   } = language === "es" ? ESData : ENData;
   const {
-    personalInformation: { contact: userContact },
+    personalInformation: { contact: userContact, name },
   } = language === "es" ? ESUser : ENUser;
+
+  useEffect(() => {
+    document.title = `${name} - ${contact.h1}`;
+  });
 
   return (
     <ContentSection

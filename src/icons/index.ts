@@ -1,3 +1,5 @@
 import WhatsApp from "./Whatsapp";
+import Linkedin from "./Linkedin";
+import Twitter from "./Twitter";
 
-export { WhatsApp };
+export { WhatsApp, Linkedin, Twitter };
