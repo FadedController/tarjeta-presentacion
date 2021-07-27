@@ -20,7 +20,7 @@ const Posts: React.FC = () => {
   return (
     <ContentSection
       maxW="max-w-lg"
-      className="flex flex-col space-y-4 items-center justify-center pt-4 px-2"
+      className="flex flex-col space-y-4 items-center justify-center pt-4 px-2 mb-24"
     >
       <h1 className="text-3xl font-semibold text-gray-800">{posts.h1}</h1>
       <div className="flex flex-col items-center justify-center">
