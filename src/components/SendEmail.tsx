@@ -39,6 +39,20 @@ const SendEmail: React.FC<SendEmailProps> = ({ input }) => {
   };
 
   useEffect(() => {
+    setParams({
+      user_email: params.user_email,
+      user_name: name,
+      link: deploymentLink,
+      first_position: position["primary-title"],
+      second_position: position["secondary-title"],
+      whatsapp: contact.whatsapp,
+      phone: contact.phone["mobile-phone"][1],
+      email: contact.email,
+      photo_src: `${deploymentLink}/img/profile.jpg`,
+    });
+  }, [language]);
+
+  useEffect(() => {
     init(userId);
   });
 
