@@ -38,8 +38,10 @@ const SendEmail: React.FC<SendEmailProps> = ({ input }) => {
     photo_src: `${deploymentLink}/img/profile.jpg`,
   };
 
+  const [params, setParams] = useState<any>(defaultParams);
+
   useEffect(() => {
-    setParams({
+    const newParams = {
       user_email: params.user_email,
       user_name: name,
       link: deploymentLink,
@@ -49,14 +51,13 @@ const SendEmail: React.FC<SendEmailProps> = ({ input }) => {
       phone: contact.phone["mobile-phone"][1],
       email: contact.email,
       photo_src: `${deploymentLink}/img/profile.jpg`,
-    });
-  }, [language]);
+    };
+    setParams(newParams);
+  }, [language, contact, deploymentLink, name, params.user_email, position]);
 
   useEffect(() => {
     init(userId);
   });
-
-  const [params, setParams] = useState<any>(defaultParams);
 
   const sendEmail = () => {
     if (!params.user_email || !params.user_email.includes("@")) return;
