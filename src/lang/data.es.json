@@ -1,0 +1,22 @@
+{
+  "personalInformation" : {
+    "name": "John Doe",
+    "position" : {
+      "primary-title": "Gerente de ventas",
+      "secondary-title": "Representación empresarial inteligente"
+    },
+    "contact": {
+      "email": "test@email.com",
+      "phone": {
+        "central-phone": ["(33) 4542 0848", "3345420848"],
+        "mobile-phone": ["(33) 4542 0848", "3345420848"]
+      },
+      "whatsapp": "https://web.whatsapp.com"
+    },
+    "location": [
+      "Eiffel Tower",
+      "Paris",
+      "France"
+    ]
+  }
+}

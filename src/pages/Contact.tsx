@@ -4,12 +4,17 @@ import ENData from "../lang/ui.en.json";
 import ContentSection from "../components/ContentSection";
 import { LanguageContext } from "../components/Pages";
 import { WhatsApp } from "../icons";
+import ENUser from "../lang/data.en.json";
+import ESUser from "../lang/data.es.json";
 
 const Contact: React.FC = () => {
   const [language] = useContext(LanguageContext);
   const {
     pages: { contact },
   } = language === "es" ? ESData : ENData;
+  const {
+    personalInformation: { contact: userContact },
+  } = language === "es" ? ESUser : ENUser;
 
   return (
     <ContentSection
@@ -26,13 +31,13 @@ const Contact: React.FC = () => {
             {contact["phone-1"].title}
           </h2>
           <p className="font-light text-gray-700 text-center">
-            {contact["phone-1"].number}
+            {userContact.phone["central-phone"][0]}
           </p>
         </div>
         <div className="grid grid-cols-3 gap-2 w-full">
           <a
             className="flex shadow-md rounded-lg py-2 text-white flex-col items-center justify-center space-y-2 bg-secondary-0 opacity-80 transform hover:scale-105 transition-all"
-            href="tel:3345420848"
+            href={`tel:${userContact.phone["central-phone"][1]}`}
           >
             <span className="material-icons">phone</span>
             <span>{contact["phone-1"]["btn-1"]}</span>
@@ -43,27 +48,27 @@ const Contact: React.FC = () => {
             {contact["phone-2"].title}
           </h2>
           <p className="font-light text-gray-700 text-center">
-            {contact["phone-2"].number}
+            {userContact.phone["mobile-phone"][0]}
           </p>
         </div>
         <div className="grid grid-cols-3 gap-2 w-full">
           <a
             className="flex shadow-md rounded-lg py-2 text-white flex-col items-center justify-center space-y-2 bg-secondary-0 opacity-80 transform hover:scale-105 transition-all"
-            href="tel:3345420848"
+            href={`tel:${userContact.phone["mobile-phone"][1]}`}
           >
             <span className="material-icons">phone</span>
             <span>{contact["phone-2"]["btn-1"]}</span>
           </a>
           <a
             className="flex shadow-md rounded-lg py-2 text-white flex-col items-center justify-center space-y-2 bg-secondary-0 opacity-80 transform hover:scale-105 transition-all"
-            href="https://web.whatsapp.com"
+            href={userContact.whatsapp}
           >
             <WhatsApp className="h-6 w-6 fill-current" />
             <span>{contact["phone-2"]["btn-2"]}</span>
           </a>
           <a
             className="flex shadow-md rounded-lg py-2 text-white flex-col items-center justify-center space-y-2 bg-secondary-0 opacity-80 transform hover:scale-105 transition-all"
-            href="sms:3345420848"
+            href={`sms:${userContact.phone["mobile-phone"][1]}`}
           >
             <span className="material-icons">sms</span>
             <span>{contact["phone-2"]["btn-3"]}</span>
@@ -74,13 +79,13 @@ const Contact: React.FC = () => {
             {contact.email.title}
           </h2>
           <p className="font-light text-gray-700 text-center">
-            {contact.email.email}
+            {userContact.email}
           </p>
         </div>
         <div className="grid grid-cols-3 gap-2 w-full">
           <a
             className="flex shadow-md rounded-lg py-2 text-white flex-col items-center justify-center space-y-2 bg-secondary-0 opacity-80 transform hover:scale-105 transition-all"
-            href="mailto:test@email.com"
+            href={`mailto:${userContact.email}`}
           >
             <span className="material-icons">mail</span>
             <span>{contact.email["btn-1"]}</span>

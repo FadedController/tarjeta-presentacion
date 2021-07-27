@@ -17,7 +17,7 @@ const Qrcode: React.FC = () => {
       <h1 className="text-3xl font-semibold text-gray-800">{qrcode.h1}</h1>
       <div className="flex flex-col items-center justify-center">
         <p className="font-light text-gray-700 text-center">{qrcode.p}</p>
-        <img src="img/frame.png" alt="QR code" />
+        <img src="img/qr_code.png" alt="QR code" />
       </div>
     </ContentSection>
   );

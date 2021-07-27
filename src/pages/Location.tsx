@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import ContentSection from "../components/ContentSection";
 import ESData from "../lang/ui.es.json";
 import ENData from "../lang/ui.en.json";
+import ENUser from "../lang/data.en.json";
+import ESUser from "../lang/data.es.json";
 import { LanguageContext } from "../components/Pages";
 
 const Location: React.FC = () => {
@@ -9,6 +11,9 @@ const Location: React.FC = () => {
   const {
     pages: { location },
   } = language === "es" ? ESData : ENData;
+  const {
+    personalInformation: { location: userLocation },
+  } = language === "es" ? ESUser : ENUser;
 
   return (
     <ContentSection
@@ -17,9 +22,11 @@ const Location: React.FC = () => {
     >
       <h1 className="text-3xl font-semibold text-gray-800">{location.h1}</h1>
       <div className="flex flex-col items-center justify-center">
-        <p className="font-light text-gray-700 text-center">Eiffel Tower</p>
-        <p className="font-light text-gray-700 text-center">Paris</p>
-        <p className="font-light text-gray-700 text-center">France</p>
+        {userLocation.map((text, idx) => (
+          <p className="font-light text-gray-700 text-center" key={idx}>
+            {text}
+          </p>
+        ))}
       </div>
       <div className="rounded-lg overflow-hidden w-full bg-gray-300 shadow-xl relative">
         <div className="absolute flex items-center justify-center top-0 bottom-0 right-0 left-0">
@@ -28,7 +35,7 @@ const Location: React.FC = () => {
           </p>
         </div>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21001.792634182162!2d2.2825966!3d48.8539373!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701f7e8337b5%3A0xa2cb58dd28914524!2sEiffel%20Tower%2C%20Paris%2C%20France!5e0!3m2!1sen!2smx!4v1627149365887!5m2!1sen!2smx"
+          src={location["iframe-src"]}
           height="300"
           allowFullScreen
           title="Map"

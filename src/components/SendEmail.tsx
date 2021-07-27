@@ -2,6 +2,11 @@ import React from "react";
 import { init, send } from "emailjs-com";
 import { useEffect } from "react";
 import { useState } from "react";
+import { userId, serviceId, templates } from "../email.config.json";
+import { useContext } from "react";
+import { LanguageContext } from "./Pages";
+import ENUser from "../lang/data.en.json";
+import ESUser from "../lang/data.es.json";
 
 interface SendEmailProps {
   input: {
@@ -13,28 +18,36 @@ interface SendEmailProps {
 
 const SendEmail: React.FC<SendEmailProps> = ({ input }) => {
   const [loading, setLoading] = useState(false);
+  const [language] = useContext(LanguageContext);
+
+  const deploymentLink = window.location.origin;
+  const template = language === "en" ? templates.en : templates.es;
+  const {
+    personalInformation: { contact, name, position },
+  } = language === "en" ? ENUser : ESUser;
+
+  const defaultParams = {
+    user_email: "",
+    user_name: name,
+    link: deploymentLink,
+    first_position: position["primary-title"],
+    second_position: position["secondary-title"],
+    whatsapp: contact.whatsapp,
+    phone: contact.phone["mobile-phone"][1],
+    email: contact.email,
+    photo_src: `${deploymentLink}/img/profile.jpg`,
+  };
 
   useEffect(() => {
-    init("user_ODoJ10S57aCFQ44Y6KbSo");
+    init(userId);
   });
 
-  const [params, setParams] = useState<any>({
-    user_email: "",
-    user_name: "John Doe",
-    link: "https://tarjeta-presentacion.vercel.app/",
-    first_position: "Sales manager",
-    second_position: "Smart business representation",
-    whatsapp: "https://web.whatsapp.com",
-    phone: "331254568",
-    email: "test@dev.com",
-    photo_src:
-      "https://d3cwdr4mx7w8ca.cloudfront.net/imgcdn/20210107132157/card/p1109photo.jpg",
-  });
+  const [params, setParams] = useState<any>(defaultParams);
 
   const sendEmail = () => {
     if (!params.user_email || !params.user_email.includes("@")) return;
     setLoading(true);
-    send("service_kpxst2l", "template_mfyymzi", params)
+    send(serviceId, template, params)
       .then(() => {
         setParams({ ...params, user_email: "" });
         setLoading(false);
