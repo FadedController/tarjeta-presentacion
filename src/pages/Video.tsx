@@ -27,7 +27,7 @@ const Video: React.FC = () => {
       <h1 className="text-3xl font-semibold text-gray-800">{video.h1}</h1>
       <div className="flex flex-col space-y-4 items-center justify-center">
         <p className="font-light text-gray-700 text-center">{video.p}</p>
-        <video className="w-4/5 rounded-lg" controls>
+        <video className="w-full rounded-lg" height="300" controls>
           <source src={videoUrl} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
