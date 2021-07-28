@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
         </div>
         <div className="grid grid-cols-3 gap-2 w-full">
           <a
-            className="flex shadow-md rounded-lg py-2 text-white flex-col items-center justify-center space-y-2 bg-secondary-0 opacity-80 transform hover:scale-105 transition-all"
+            className="flex shadow-md rounded-lg py-2 text-white flex-col items-center justify-center space-y-2 bg-secondary-0 opacity-70 transform hover:scale-105 transition-all"
             href={`tel:${userContact.phone["central-phone"][1]}`}
           >
             <span className="material-icons">phone</span>
@@ -58,21 +58,21 @@ const Contact: React.FC = () => {
         </div>
         <div className="grid grid-cols-3 gap-2 w-full">
           <a
-            className="flex shadow-md rounded-lg py-2 text-white flex-col items-center justify-center space-y-2 bg-secondary-0 opacity-80 transform hover:scale-105 transition-all"
+            className="flex shadow-md rounded-lg py-2 text-white flex-col items-center justify-center space-y-2 bg-secondary-0 opacity-70 transform hover:scale-105 transition-all"
             href={`tel:${userContact.phone["mobile-phone"][1]}`}
           >
             <span className="material-icons">phone</span>
             <span>{contact["phone-2"]["btn-1"]}</span>
           </a>
           <a
-            className="flex shadow-md rounded-lg py-2 text-white flex-col items-center justify-center space-y-2 bg-secondary-0 opacity-80 transform hover:scale-105 transition-all"
+            className="flex shadow-md rounded-lg py-2 text-white flex-col items-center justify-center space-y-2 bg-secondary-0 opacity-70 transform hover:scale-105 transition-all"
             href={userContact.whatsapp}
           >
             <WhatsApp className="h-6 w-6 fill-current" />
             <span>{contact["phone-2"]["btn-2"]}</span>
           </a>
           <a
-            className="flex shadow-md rounded-lg py-2 text-white flex-col items-center justify-center space-y-2 bg-secondary-0 opacity-80 transform hover:scale-105 transition-all"
+            className="flex shadow-md rounded-lg py-2 text-white flex-col items-center justify-center space-y-2 bg-secondary-0 opacity-70 transform hover:scale-105 transition-all"
             href={`sms:${userContact.phone["mobile-phone"][1]}`}
           >
             <span className="material-icons">sms</span>
@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
         </div>
         <div className="grid grid-cols-3 gap-2 w-full">
           <a
-            className="flex shadow-md rounded-lg py-2 text-white flex-col items-center justify-center space-y-2 bg-secondary-0 opacity-80 transform hover:scale-105 transition-all"
+            className="flex shadow-md rounded-lg py-2 text-white flex-col items-center justify-center space-y-2 bg-secondary-0 opacity-70 transform hover:scale-105 transition-all"
             href={`mailto:${userContact.email}`}
           >
             <span className="material-icons">mail</span>
