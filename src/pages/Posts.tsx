@@ -12,7 +12,7 @@ const Posts: React.FC = () => {
     pages: { posts },
   } = language === "es" ? ESData : ENData;
   const {
-    personalInformation: { name },
+    personalInformation: { name, about },
   } = language === "es" ? ESUser : ENUser;
   useEffect(() => {
     document.title = `${name} - ${posts.h1}`;
@@ -26,7 +26,39 @@ const Posts: React.FC = () => {
       <div className="flex flex-col items-center justify-center">
         <p className="font-light text-gray-700 text-center">{posts.p}</p>
       </div>
-      <div className="bg-tertiary-0 h-96 w-full rounded-lg shadow-lg"></div>
+      <div className="flex flex-col space-y-6">
+        {about.cards.map((card, idx) => {
+          return (
+            <div
+              key={idx}
+              className="bg-gray-200 rounded-lg shadow-lg flex flex-col sm:flex-row overflow-hidden transform transition-transform hover:scale-105"
+            >
+              <img
+                src={card["img-src"]}
+                className="w-full opacity-80"
+                alt={card.title}
+              ></img>
+              <div
+                style={{ flexFlow: "row wrap" }}
+                className="flex flex-col justify-start space-y-2 p-4"
+              >
+                <h3 className="text-2xl font-semibold text-gray-800">
+                  {card.title}
+                </h3>
+                <p>{card.description}</p>
+                <a
+                  rel="noreferrer"
+                  href={card.cta[1]}
+                  target="_blank"
+                  className="px-3 py-2 font-semibold text-gray-50 text-lg bg-secondary-0 transition-opacity hover:opacity-90 cursor-pointer opacity-70 rounded-lg"
+                >
+                  {card.cta[0]}
+                </a>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </ContentSection>
   );
 };
