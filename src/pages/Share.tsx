@@ -47,7 +47,7 @@ const Share: React.FC = () => {
 
   return (
     <ContentSection
-      maxW="max-w-lg"
+      maxW="max-w-2xl"
       className="flex flex-col space-y-4 items-center justify-center pt-4 px-2 mb-24"
     >
       <h1 className="text-3xl font-semibold text-gray-800">{share.h1}</h1>
@@ -65,6 +65,21 @@ const Share: React.FC = () => {
           <div>
             <p className="h-10 flex justify-center items-center">
               {share.buttons["btn-1"]}
+            </p>
+          </div>
+        </Link>
+        <Link
+          to="vcard"
+          className="border shadow-md rounded-lg overflow-hidden transform transition-transform hover:scale-105"
+        >
+          <div className="bg-tertiary-0 flex items-center justify-center h-12">
+            <span className="material-icons text-3xl text-white">
+              contact_mail
+            </span>
+          </div>
+          <div>
+            <p className="h-10 flex justify-center items-center">
+              {share.buttons["btn-4"]}
             </p>
           </div>
         </Link>

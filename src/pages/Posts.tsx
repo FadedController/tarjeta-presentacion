@@ -19,13 +19,14 @@ const Posts: React.FC = () => {
   });
   return (
     <ContentSection
-      maxW="max-w-lg"
+      maxW="max-w-2xl"
       className="flex flex-col space-y-4 items-center justify-center pt-4 px-2 mb-24"
     >
       <h1 className="text-3xl font-semibold text-gray-800">{posts.h1}</h1>
       <div className="flex flex-col items-center justify-center">
         <p className="font-light text-gray-700 text-center">{posts.p}</p>
       </div>
+      <div className="bg-tertiary-0 h-96 w-full rounded-lg shadow-lg"></div>
     </ContentSection>
   );
 };

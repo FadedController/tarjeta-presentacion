@@ -13,6 +13,7 @@ import Posts from "../pages/Posts";
 import Mail from "../pages/Mail";
 import { createContext } from "react";
 import { useState } from "react";
+import VCard from "../pages/vCard";
 
 type Language = "es" | "en";
 
@@ -49,6 +50,7 @@ const Pages: React.FC = () => {
             <Route path="/video" component={Video} />
             <Route path="/about" component={Posts} />
             <Route path="/mail" component={Mail} />
+            <Route path="/vcard" component={VCard} />
             <Route exact path="/" component={Index} />
             <Route path="*">Not Found</Route>
           </AnimatedSwitch>

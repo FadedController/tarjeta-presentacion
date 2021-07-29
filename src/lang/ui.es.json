@@ -41,6 +41,10 @@
       "h1": "Codigo QR",
       "p": "Usa la cámara de tu smartphone o un lector de QR para acceder a la tarjeta digital."
     },
+    "vcard": {
+      "h1": "Agregar contacto",
+      "p": "Usa la cámara de tu smartphone o haz clic en el codigo QR para agregar mi contacto directamente"
+    },
     "share": {
       "h1": "Compartir",
       "h2": "Redes Sociales",
@@ -48,7 +52,8 @@
       "buttons": {
         "btn-1": "Codigo QR",
         "btn-2": "Enviar por correo",
-        "btn-3": ["Copiar URL", "URL Copiada!"]
+        "btn-3": ["Copiar URL", "URL Copiada!"],
+        "btn-4": "Añadir contacto"
       },
       "share-strings": {
         "whatsapp": "Accede a la tarjeta digital directamente desde este enlace: ",

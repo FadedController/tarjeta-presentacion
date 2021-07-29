@@ -23,7 +23,7 @@ const Index: React.FC = () => {
 
   return (
     <ContentSection
-      maxW="max-w-lg"
+      maxW="max-w-2xl"
       className="flex flex-col space-y-3 items-center pt-4 mb-24"
     >
       <h1 className="text-3xl font-semibold text-gray-800">{name}</h1>

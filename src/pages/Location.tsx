@@ -21,7 +21,7 @@ const Location: React.FC = () => {
 
   return (
     <ContentSection
-      maxW="max-w-lg"
+      maxW="max-w-2xl"
       className="flex flex-col space-y-4 items-center justify-center pt-4 px-2 mb-24"
     >
       <h1 className="text-3xl font-semibold text-gray-800">{location.h1}</h1>
@@ -40,7 +40,7 @@ const Location: React.FC = () => {
         </div>
         <iframe
           src={location["iframe-src"]}
-          height="300"
+          height="400"
           allowFullScreen
           title="Map"
           className="w-full relative rounded-lg"

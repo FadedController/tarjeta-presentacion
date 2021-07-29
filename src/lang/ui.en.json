@@ -41,6 +41,10 @@
       "h1": "QR Code",
       "p": "Use your smarthphone's camera or a QR scanner to access the digital card."
     },
+    "vcard": {
+      "h1": "Add Contact",
+      "p": "Use your smartphone's camera or a clic on the QR code to add my contact directly"
+    },
     "share": {
       "h1": "Share",
       "h2": "Social Media",
@@ -48,7 +52,8 @@
       "buttons": {
         "btn-1": "QR Code",
         "btn-2": "Send via email",
-        "btn-3": ["Copy URL", "URL Copied!"]
+        "btn-3": ["Copy URL", "URL Copied!"],
+        "btn-4": "Add contact"
       },
       "share-strings": {
         "whatsapp": "Access the digital business card directly from this link: ",

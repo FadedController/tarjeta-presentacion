@@ -25,6 +25,16 @@ const Header: React.FC = () => {
     return false;
   };
 
+  const pageUrl = window.location.origin;
+
+  const downloadVcard = () => {
+    const a = document.createElement("a");
+    a.href = `${pageUrl}/vcard.vcf`;
+    console.log(a.href);
+    a.setAttribute("download", "vcard.vcf");
+    a.click();
+  };
+
   useEffect(() => {
     const expanded = isOnIndex(location.pathname);
     setIsExpanded(expanded);
@@ -39,6 +49,7 @@ const Header: React.FC = () => {
       <div className="absolute h-32 w-full -bottom-16 flex items-center justify-center">
         <Link to="/">
           <img
+            onClick={isExpanded ? downloadVcard : () => {}}
             className={`${
               isExpanded ? "h-36 w-36" : "h-24 w-24"
             } transition-all rounded-full shadow-xl`}
