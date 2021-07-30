@@ -21,12 +21,6 @@
           "title": "Lorem Ipsum",
           "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam laborum odit eum labore repudiandae reprehenderit libero voluptas culpa corrupti tempora.",
           "cta": ["Haz clic aquí", "https://2bcard.com/ccc397184?l=2#"]
-        },
-        {
-          "img-src": "img/profile.jpg",
-          "title": "Lorem Ipsum",
-          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam laborum odit eum labore repudiandae reprehenderit libero voluptas culpa corrupti tempora.",
-          "cta": ["Haz clic aquí", "https://2bcard.com/ccc397184?l=2#"]
         }
       ]
     }
