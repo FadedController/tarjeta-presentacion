@@ -32,13 +32,12 @@ const Pages: React.FC = () => {
   const [uiJSON, setUiJSON] = useState(null);
 
   useEffect(() => {
-    const pageUrl = window.location.origin;
     const dataFilename = language === "en" ? "data.en.json" : "data.es.json";
     const uiFilename = language === "en" ? "ui.en.json" : "ui.es.json";
-    axios.get(`${pageUrl}/data/${dataFilename}`).then((dataRes) => {
+    axios.get(`data/${dataFilename}`).then((dataRes) => {
       setDataJSON(dataRes.data);
     });
-    axios.get(`${pageUrl}/data/${uiFilename}`).then((uiRes) => {
+    axios.get(`data/${uiFilename}`).then((uiRes) => {
       setUiJSON(uiRes.data);
     });
   }, [language]);
