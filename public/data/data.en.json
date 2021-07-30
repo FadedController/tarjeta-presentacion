@@ -1,7 +1,7 @@
 {
-  "personalInformation" : {
+  "personalInformation": {
     "name": "Jane Doe",
-    "position" : {
+    "position": {
       "primary-title": "Sales Manager",
       "secondary-title": "Smart business representation"
     },
@@ -13,11 +13,7 @@
       },
       "whatsapp": "https://web.whatsapp.com"
     },
-    "location": [
-      "Eiffel Tower",
-      "Paris",
-      "France"
-    ],
+    "location": ["Eiffel Tower", "Paris", "France"],
     "about": {
       "cards": [
         {
