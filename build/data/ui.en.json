@@ -1,0 +1,89 @@
+{
+  "pages": {
+    "index": {
+      "btn-1": "Call",
+      "btn-2": "WhatsApp",
+      "btn-3": "Email"
+    },
+    "contact": {
+      "h1": "Contact",
+      "p": "Contact me directly using any of the buttons underneath.",
+      "phone-1": {
+        "title": "Central phone:",
+        "btn-1": "Call"
+      },
+      "phone-2": {
+        "title": "Mobile:",
+        "btn-1": "Call",
+        "btn-2": "WhatsApp",
+        "btn-3": "SMS"
+      },
+      "email": {
+        "title": "Email:",
+        "btn-1": "Email"
+      }
+    },
+    "location": {
+      "h1": "Location",
+      "iframe-src": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21001.792634182162!2d2.2825966!3d48.8539373!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701f7e8337b5%3A0xa2cb58dd28914524!2sEiffel%20Tower%2C%20Paris%2C%20France!5e0!3m2!1sen!2smx!4v1627149365887!5m2!1sen!2smx",
+      "loading": "Loading map..."
+    },
+    "mail": {
+      "h1": "Share via email",
+      "p": "Send this card to any valid email adress",
+      "input": {
+        "placeholder": "Write your email here",
+        "btn-1": "Send",
+        "loading": "Sending..."
+      }
+    },
+    "qrcode": {
+      "h1": "QR Code",
+      "p": "Use your smarthphone's camera or a QR scanner to access the digital card."
+    },
+    "vcard": {
+      "h1": "Add Contact",
+      "p": "Use your smartphone's camera or a clic on the QR code to add my contact directly"
+    },
+    "share": {
+      "h1": "Share",
+      "h2": "Social Media",
+      "p": "You can share this card easily with any of the services you have enabled in your device.",
+      "buttons": {
+        "btn-1": "QR Code",
+        "btn-2": "Send via email",
+        "btn-3": ["Copy URL", "URL Copied!"],
+        "btn-4": "Add contact"
+      },
+      "share-strings": {
+        "whatsapp": "Access the digital business card directly from this link: ",
+        "twitter": "Look at the digital business card I found: ",
+        "sms": "Look at this digital business card: "
+      }
+    },
+    "video": {
+      "h1": "Video",
+      "p": "Have a look at this video!"
+    },
+    "posts": {
+      "h1": "About",
+      "p": "Take a look to all of this extra information!"
+    }
+  },
+  "components": {
+    "header": {
+      "alt-img": "Front photograph",
+      "btn-1": "Share",
+      "btn-2": "QR Code",
+      "btn-3": "Close",
+      "btn-4": "Language"
+    },
+    "navigation": {
+      "btn-1": "Contact",
+      "btn-2": "Location",
+      "btn-3": "About",
+      "btn-4": "Video",
+      "btn-5": "Share"
+    }
+  }
+}

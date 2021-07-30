@@ -1,0 +1,89 @@
+{
+  "pages": {
+    "index": {
+      "btn-1": "Llamar",
+      "btn-2": "WhatsApp",
+      "btn-3": "Email"
+    },
+    "contact": {
+      "h1": "Contacto",
+      "p": "Puedes contactar directamente pulsando el icono deseado.",
+      "phone-1": {
+        "title": "Telefono Central:",
+        "btn-1": "Llamar"
+      },
+      "phone-2": {
+        "title": "Movil:",
+        "btn-1": "Llamar",
+        "btn-2": "WhatsApp",
+        "btn-3": "SMS"
+      },
+      "email": {
+        "title": "Correo electrónico:",
+        "btn-1": "Email"
+      }
+    },
+    "location": {
+      "h1": "Ubicación",
+      "iframe-src": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21001.792634182162!2d2.2825966!3d48.8539373!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701f7e8337b5%3A0xa2cb58dd28914524!2sEiffel%20Tower%2C%20Paris%2C%20France!5e0!3m2!1sen!2smx!4v1627149365887!5m2!1sen!2smx",
+      "loading": "Cargando mapa..."
+    },
+    "mail": {
+      "h1": "Compartir por correo",
+      "p": "Envia esta tarjeta a cualquier direccion valida de correo electrónico",
+      "input": {
+        "placeholder": "Escribe aqui tu correo",
+        "btn-1": "Enviar",
+        "loading": "Enviando..."
+      }
+    },
+    "qrcode": {
+      "h1": "Codigo QR",
+      "p": "Usa la cámara de tu smartphone o un lector de QR para acceder a la tarjeta digital."
+    },
+    "vcard": {
+      "h1": "Agregar contacto",
+      "p": "Usa la cámara de tu smartphone o haz clic en el codigo QR para agregar mi contacto directamente"
+    },
+    "share": {
+      "h1": "Compartir",
+      "h2": "Redes Sociales",
+      "p": "Puedes compartir esta tarjeta fácilmente en cualquiera de los sistemas informados que tengas habilitados en tu dispositivo.",
+      "buttons": {
+        "btn-1": "Codigo QR",
+        "btn-2": "Enviar por correo",
+        "btn-3": ["Copiar URL", "URL Copiada!"],
+        "btn-4": "Añadir contacto"
+      },
+      "share-strings": {
+        "whatsapp": "Accede a la tarjeta digital directamente desde este enlace: ",
+        "twitter": "Miren la tarjeta de presentación digital que encontré: ",
+        "sms": "Mira esta tarjeta de presentación digital: "
+      }
+    },
+    "video": {
+      "h1": "Video",
+      "p": "Dale un vistazo a este video!"
+    },
+    "posts": {
+      "h1": "Acerca de",
+      "p": "Dale un vistazo a toda esta informacion!"
+    }
+  },
+  "components": {
+    "header": {
+      "alt-img": "Fotografia de frente",
+      "btn-1": "Compartir",
+      "btn-2": "Código QR",
+      "btn-3": "Cerrar",
+      "btn-4": "Lenguaje"
+    },
+    "navigation": {
+      "btn-1": "Contacto",
+      "btn-2": "Ubicación",
+      "btn-3": "Acerca de",
+      "btn-4": "Video",
+      "btn-5": "Compartir"
+    }
+  }
+}

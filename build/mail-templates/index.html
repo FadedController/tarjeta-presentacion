@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        font-size: 14px;
+        font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto',
+          'Oxygen', 'Ubuntu', 'Cantarell', 'Droid Sans', 'Helvetica Neue';
+      "
+    >
+      <div style="margin-top: 2rem; text-align: center">
+        <img
+          src="{{photo_src}}"
+          alt="this is a profile picture"
+          style="border-radius: 50%; height: 10rem; width: 10rem"
+        />
+      </div>
+      <div style="margin: 2rem; text-align: center">
+        <h1
+          style="
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            padding: 0;
+            color: rgba(31, 41, 55, 1);
+            font-weight: 600;
+            font-size: 1.875rem;
+          "
+        >
+          {{user_name}}
+        </h1>
+        <h2
+          style="
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            padding: 0;
+            color: rgba(55, 65, 81, 1);
+            font-weight: 300;
+            font-size: 1.25rem;
+          "
+        >
+        {{first_position}}
+        </h2>
+        <h2
+          style="
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            padding: 0;
+            color: rgba(55, 65, 81, 1);
+            font-weight: 300;
+            font-size: 1.25rem;
+          "
+        >
+          {{second_position}}
+        </h2>
+      </div>
+      <div>
+        <div
+          style="
+            display: table;
+            overflow: hidden;
+            text-align: center;
+            margin: 0 auto;
+          "
+        >
+          <div
+            style="
+              display: table-cell;
+              vertical-align: middle;
+              text-align: center;
+            "
+          >
+            <a
+              href="tel:{{phone}}"
+              style="
+                display: table;
+                margin-left: 0.725rem;
+                margin-right: 0.725rem;
+                height: 4.5rem;
+                width: 4.5rem;
+                background-color: #00598F;
+                color: rgba(229, 231, 235, 1);
+                border-radius: 50%;
+              "
+            >
+            <span
+              style="display: table-cell; vertical-align: middle"
+            >
+              <img
+              src="https://tarjeta-presentacion.vercel.app/img/phone.png"
+              ></img>
+            </span>
+            </a>
+            <div
+              style="
+                color: rgba(55, 65, 81, 1);
+                font-weight: 300;
+                text-align: center;
+                margin-top: 0.675rem;
+              "
+            >
+              Llamar
+            </div>
+          </div>
+          <div
+            style="
+              display: table-cell;
+              vertical-align: middle;
+              text-align: center;
+            "
+          >
+            <a
+              href="{{whatsapp}}"
+              target="_blank"
+              style="
+                display: table;
+                margin-left: 0.725rem;
+                margin-right: 0.725rem;
+                height: 4.5rem;
+                width: 4.5rem;
+                background-color: #00598F;
+                color: rgba(229, 231, 235, 1);
+                border-radius: 50%;
+              "
+            >
+            <span
+            style="display: table-cell; vertical-align: middle"
+          >
+            <img
+            src="https://tarjeta-presentacion.vercel.app/img/whatsapp.png"
+
+            ></img>
+          </span>
+            </a>
+            <div
+              style="
+                color: rgba(55, 65, 81, 1);
+                font-weight: 300;
+                text-align: center;
+                margin-top: 0.675rem;
+              "
+            >
+              Whatsapp
+            </div>
+          </div>
+          <div
+            style="
+              display: table-cell;
+              vertical-align: middle;
+              text-align: center;
+            "
+          >
+            <a
+              href="mailto:{{email}}"
+              style="
+                display: table;
+                margin-left: 0.725rem;
+                margin-right: 0.725rem;
+                height: 4.5rem;
+                width: 4.5rem;
+                background-color: #00598F;
+                color: rgba(229, 231, 235, 1);
+                border-radius: 50%;
+              "
+            >
+            <span
+             style="display: table-cell; vertical-align: middle"
+            >
+              <img
+              src="https://tarjeta-presentacion.vercel.app/img/mail.png"
+              ></img>
+            </span>
+            </a>
+            <div
+              style="
+                color: rgba(55, 65, 81, 1);
+                font-weight: 300;
+                text-align: center;
+                margin-top: 0.675rem;
+              "
+            >
+              Email
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin: 2rem; text-align: center">
+        <p
+          style="
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            padding: 0;
+            color: rgba(55, 65, 81, 1);
+            font-weight: 300;
+            font-size: 1rem;
+          "
+        >
+          Haz clic <a
+          href="{{link}}"
+          target="_blank"
+          style="text-decoration: underline; cursor: pointer;"
+          >aqui</a> para mas informacion
+        </h2>
+      </div>
+    </div>
+  </body>
+</html>
