@@ -12,7 +12,6 @@ const Video: React.FC = () => {
       document.title = `${name} - ${video.h1}`;
     }
   });
-  const videoUrl = `${window.location.origin}/video/video.mp4`;
 
   if (uiJSON) {
     const { video } = uiJSON.pages;
@@ -25,7 +24,7 @@ const Video: React.FC = () => {
         <div className="flex flex-col space-y-4 items-center justify-center">
           <p className="font-light text-gray-700 text-center">{video.p}</p>
           <video className="w-full rounded-lg" height="300" controls>
-            <source src={videoUrl} type="video/mp4" />
+            <source src="video/video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

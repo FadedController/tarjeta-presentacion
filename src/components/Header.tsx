@@ -16,7 +16,7 @@ const Header: React.FC = () => {
   };
 
   const isOnIndex = (path: string) => {
-    if (path === "/") return true;
+    if (path === "/build/") return true;
     return false;
   };
 
@@ -24,7 +24,7 @@ const Header: React.FC = () => {
 
   const downloadVcard = () => {
     const a = document.createElement("a");
-    a.href = `${pageUrl}/vcard.vcf`;
+    a.href = `${pageUrl}/build/vcard.vcf`;
     console.log(a.href);
     a.setAttribute("download", "vcard.vcf");
     a.click();
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
         } transition-all bg-img opacity-80 relative z-50`}
       >
         <div className="absolute h-32 w-full -bottom-16 flex items-center justify-center">
-          <Link to="/">
+          <Link to="/build/">
             <img
               onClick={isExpanded ? downloadVcard : () => {}}
               className={`${
@@ -71,7 +71,7 @@ const Header: React.FC = () => {
             <p className="hidden lg:block text-white">{header["btn-4"]}</p>
           </button>
           <Link
-            to="/share"
+            to="/build/share"
             className="flex flex-col items-center justify-center transform transition-transform hover:scale-110 hover:rotate-6"
           >
             <span className="material-icons text-white">share</span>
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
           </Link>
           <Link
             className="flex flex-col items-center justify-center transform transition-transform hover:scale-110 hover:rotate-6"
-            to="/qr-code"
+            to="/build/qr-code"
           >
             <span className="material-icons text-white">qr_code</span>
             <p className="hidden lg:block text-white">{header["btn-2"]}</p>
@@ -91,7 +91,7 @@ const Header: React.FC = () => {
           } flex flex-col space-y-4 items-center rounded-bl-lg justify-center overflow-hidden bg-secondary-0 opacity-90 absolute -bottom-24 lg:-bottom-36 right-0 tranistion-all`}
         >
           <Link
-            to="/"
+            to="/build/"
             className="transform transition-transform hover:scale-110 hover:rotate-6 flex flex-col items-center justify-center"
           >
             <span className="material-icons text-white text-3xl">close</span>

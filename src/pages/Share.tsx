@@ -57,7 +57,7 @@ const Share: React.FC = () => {
         </div>
         <div className="w-full grid grid-cols-3 gap-2 px-2">
           <Link
-            to="qr-code"
+            to="/build/qr-code"
             className="border shadow-md rounded-lg overflow-hidden transform transition-transform hover:scale-105"
           >
             <div className="bg-tertiary-0 flex items-center justify-center h-12">
@@ -72,7 +72,7 @@ const Share: React.FC = () => {
             </div>
           </Link>
           <Link
-            to="vcard"
+            to="/build/vcard"
             className="border shadow-md rounded-lg overflow-hidden transform transition-transform hover:scale-105"
           >
             <div className="bg-tertiary-0 flex items-center justify-center h-12">
@@ -87,7 +87,7 @@ const Share: React.FC = () => {
             </div>
           </Link>
           <Link
-            to="mail"
+            to="/build/mail"
             className="border shadow-md rounded-lg overflow-hidden transform transition-transform hover:scale-105"
           >
             <div className="bg-tertiary-0 flex items-center justify-center h-12">

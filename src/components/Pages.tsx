@@ -35,10 +35,10 @@ const Pages: React.FC = () => {
     const pageUrl = window.location.origin;
     const dataFilename = language === "en" ? "data.en.json" : "data.es.json";
     const uiFilename = language === "en" ? "ui.en.json" : "ui.es.json";
-    axios.get(`${pageUrl}/data/${dataFilename}`).then((dataRes) => {
+    axios.get(`${pageUrl}/build/data/${dataFilename}`).then((dataRes) => {
       setDataJSON(dataRes.data);
     });
-    axios.get(`${pageUrl}/data/${uiFilename}`).then((uiRes) => {
+    axios.get(`${pageUrl}/build/data/${uiFilename}`).then((uiRes) => {
       setUiJSON(uiRes.data);
     });
   }, [language]);
@@ -57,23 +57,31 @@ const Pages: React.FC = () => {
           <Router>
             <Header />
             <Switch>
-              <AnimatedSwitch
-                atEnter={{ opacity: 0 }}
-                atLeave={{ opacity: 0 }}
-                atActive={{ opacity: 1 }}
-                className="switch-wrapper"
-              >
-                <Route path="/share" component={Share} />
-                <Route path="/qr-code" component={Qrcode} />
-                <Route path="/location" component={Location} />
-                <Route path="/contact" component={Contact} />
-                <Route path="/video" component={Video} />
-                <Route path="/about" component={Posts} />
-                <Route path="/mail" component={Mail} />
-                <Route path="/vcard" component={VCard} />
-                <Route exact path="/" component={Index} />
-                <Route path="*">Not Found</Route>
-              </AnimatedSwitch>
+              <Route path="/build/">
+                <Switch>
+                  <AnimatedSwitch
+                    atEnter={{ opacity: 0 }}
+                    atLeave={{ opacity: 0 }}
+                    atActive={{ opacity: 1 }}
+                    className="switch-wrapper"
+                  >
+                    <Route path="/build/share" component={Share} />
+                    <Route path="/build/qr-code" component={Qrcode} />
+                    <Route path="/build/location" component={Location} />
+                    <Route path="/build/contact" component={Contact} />
+                    <Route path="/build/video" component={Video} />
+                    <Route path="/build/about" component={Posts} />
+                    <Route path="/build/mail" component={Mail} />
+                    <Route path="/build/vcard" component={VCard} />
+                    <Route exact path="/build/" component={Index} />
+                    <Route path="*">
+                      {language === "en"
+                        ? "This page could not be found"
+                        : "No pudimos encontrar esta pagina"}
+                    </Route>
+                  </AnimatedSwitch>
+                </Switch>
+              </Route>
             </Switch>
             <Navigation />
           </Router>
